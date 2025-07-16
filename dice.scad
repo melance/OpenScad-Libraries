@@ -1,4 +1,4 @@
-include <bosl2/std.scad>
+include <BOSL2/std.scad>
 
 _demo=true;
 
@@ -37,8 +37,8 @@ function D4(r) =
 	)
 	[side,xflip(side)];
 
-module D4(r,stroke=1){
-	stroke(D4(r),width=stroke);
+module D4(r,stroke_width=1){
+	stroke(D4(r),width=stroke_width);
 }
 
 function D6(r) = 
@@ -47,8 +47,8 @@ function D6(r) =
 	)
 	fwd(d/2,[[0,0],[0,d/2],[d/-2,d/2+d/4],[0,d],[d/2,d/2+d/4],[d/2,d/4],[0,0],[d/-2,d/4],[d/-2,d/2+d/4],[0,d/2],[d/2,d/2+d/4]]);
 
-module D6(r,stroke=1){
-	stroke(D6(r),stroke);
+module D6(r,stroke_width=1){
+	stroke(D6(r),stroke_width);
 }
 
 function D8(r) = 
@@ -57,8 +57,8 @@ function D8(r) =
 	)
 	fwd(d/2,[[0,0],[d/-2.5,d/2],[0,d],[d/2.5,d/2],[0,0],[d/-2.5,d/2],[d/2.5,d/2]]);
 
-module D8(r,stroke=1){
-	stroke(D8(r),stroke);
+module D8(r,stroke_width=1){
+	stroke(D8(r),stroke_width);
 }
 
 function D10(r) =
@@ -71,8 +71,8 @@ function D10(r) =
 		[0,d],[d/-4,d/2+offset],[0,d/2-offset],[d/4,d/2+offset],[d/2,d/2],[0,d],[d/4,d/2+offset]
 	]);
 
-module D10(r,stroke=1){
-	stroke(D10(r), stroke);
+module D10(r,stroke_width=1){
+	stroke(D10(r), stroke_width);
 }
 
 function D12(r) =
@@ -87,8 +87,8 @@ function D12(r) =
 	)
 	[spoke0,spoke1,spoke2,spoke3,spoke4,decagon,pentagon];
 
-module D12(r,stroke=1){
-	stroke(D12(r), stroke);
+module D12(r,stroke_width=1){
+	stroke(D12(r), stroke_width);
 }
 
 function D20(r) =
@@ -110,6 +110,6 @@ function D20(r) =
 		concat([hexagon[5],center[0]])
 	];
 
-module D20(r,stroke=1){	
-	stroke(D20(r), stroke);
+module D20(r,stroke_width=1){	
+	stroke(D20(r), stroke_width);
 }
