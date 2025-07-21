@@ -25,8 +25,6 @@ x_spacing_to_center=45;
 
 $fn=$preview?40:120;
 
-// skadis_peg() show_anchors();
-
 // Generates a single Skadis Peg
 module skadis_peg(anchor=CENTER,spin=0,orient=UP){
 	rounding_ends=(peg_width)/2;
