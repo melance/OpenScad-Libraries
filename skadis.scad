@@ -34,9 +34,7 @@ module skadis_peg(anchor=CENTER,spin=0,orient=UP){
 	attachable(size=[peg_width,peg_depth,peg_height],spin=spin,anchor=anchor,orient=orient){
 		xrot(90)
 		up((peg_depth-peg_width)/2)
-		color_this("green")
 		cuboid([peg_width,peg_height,peg_width],rounding=rounding_ends,edges="Z"){
-			color_this("red")
 			attach(TOP,TOP,align=BACK,inside=true)
 			cuboid([peg_width,peg_height/2,peg_depth],rounding=rounding_ends,edges="Z");
 		}
