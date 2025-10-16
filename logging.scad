@@ -27,6 +27,13 @@ module echo_current_log_level() {
 	else echo(str("Current Log Level → ", log_level, ": ", log_levels[log_level]));
 }
 
+// Echoes if the condition is true
+module log_if(message,condition){
+	if (condition)
+		echo(message);
+}
+
+
 // Logs the provided message if the level is greater than or equal to the current log_level
 module log_message(message,level=1){
 	if (log_level>0 && level>=log_level)
